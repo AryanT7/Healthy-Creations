@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/result.css">
+</head>
+
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="{{url_for('home')}}"><img src="/static/images/logo.PNG" width="120"></a>
+        </div>
+        <div class="nav_side">
+            <a href="{{url_for('about')}}">About Us</a>
+            <!-- <a href="service.html">Services</a> -->
+            <a href="{{url_for('contact_us')}}">Contact</a>
+            <a href="{{url_for('home')}}">LogOut</a>
+            <a href="{{url_for('video')}}">Guided-Videos</a>
+        </div>
+    </nav><br><br><br><br><br><br><br>
+    <div>
+        <h1 style="text-align: center;">YOUR  MEAL  ANALYSIS</h1>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js">
+
+
+
+
+        </script>
+
+        <canvas id="myChart" style="max-width:1250px;max-block-size: 400px;">
+            <input type="text">
+        </canvas>
+
+
+    </div>
+
+    </script>
+
+    <h2>Your Caloric and Nutritional Requirements:</h2><br>
+
+    <div class="calorie">
+        <div class="cal">
+
+            <fieldset class="cal1" id="Carbohydrates" name="carb" style="width: 50px;">
+                <legend style="color:brown ;"><b>Carbohydrates</b></legend><b>{{carb}} gms</b>
+            </fieldset>
+            <fieldset class="cal2" id="protein" name="protein" style=" width:50px;">
+                <legend style="color: brown;"><b>Proteins</b></legend><b>{{protein}} gms</b>
+            </fieldset>
+
+            <fieldset class="cal3" id="fats" name="fats" style=" width:50px;">
+                <legend style="color: brown;"><b>Fats</b></legend><b>{{fats}} gms</b>
+            </fieldset>
+            <fieldset class="cal4" id="BMI" name="bmi" style=" width:50px;">
+                <legend style="color: brown;"><b>BMI</b></legend><b>{{bmi}} gms</b>
+            </fieldset><br><br><br><br><br>
+        </div>
+        <div class="rightbox">
+            <fieldset class="cal5" id="Totalcalorie" name="cal" style=" width: 200px;">
+                <legend style="color: brown;"><b> Calorie</b></legend><b>{{cal}} gms</b>
+            </fieldset>
+        </div>
+    </div>
+
+
+
+    <script src="/static/chart.js"></script>
+    <div class="total_calorie">
+        <h3>TOTAL CALORIES</h3>
+        <div>
+        </div>
+    </div>
+    </div>
+
+    <fieldset class="fieldset">
+        <legend>RECOMMENDATIONS</legend>
+        <!-- <select>
+             <option>
+                A
+            </option>
+            <option>
+                A
+            </option>
+            <option>
+                A
+            </option>
+            <option>
+                A
+            </option> 
+        </select> -->
+    </fieldset>
+
+
+</body>
+<script src="/static/chart.js"></script>
+
+</html>
